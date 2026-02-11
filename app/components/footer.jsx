@@ -10,7 +10,8 @@ export default function Footer() {
     { href: '/admission', label: 'Admission' },
     { href: '/alumni', label: 'Alumni' },
     { href: '/facilities', label: 'Facilities' },
-    { href: '/contact', label: 'Contact Us' }
+    { href: '/contact', label: 'Contact Us' },
+    { href: '/events', label: 'Events' }
   ];
 
   const socialLinks = [

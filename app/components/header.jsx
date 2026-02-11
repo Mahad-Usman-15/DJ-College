@@ -47,6 +47,13 @@ export default function Navbar() {
                     </Link>
 
                     <Link
+                        href="/events"
+                        className="relative text-[#2c2c2c] font-medium text-[15px] transition-colors duration-300 hover:text-[#2d5016] after:content-[''] after:absolute after:bottom-[-4px] after:left-0 after:w-0 after:h-[2px] after:bg-[#2d5016] after:transition-all after:duration-300 hover:after:w-full"
+                    >
+                        Events
+                    </Link>
+
+                    <Link
                         href="/contact"
                         className="relative text-[#2c2c2c] font-medium text-[15px] transition-colors duration-300 hover:text-[#2d5016] after:content-[''] after:absolute after:bottom-[-4px] after:left-0 after:w-0 after:h-[2px] after:bg-[#2d5016] after:transition-all after:duration-300 hover:after:w-full"
                     >
@@ -96,6 +103,13 @@ export default function Navbar() {
                         onClick={() => setIsMobileMenuOpen(false)}
                     >
                         Facilities
+                    </Link>
+                    <Link
+                       href="/events"
+                        className="text-[#2c2c2c] font-medium text-[15px] transition-colors duration-300 hover:text-[#2d5016]"
+                        onClick={() => setIsMobileMenuOpen(false)}
+                    >
+                      Events
                     </Link>
                     <Link
                        href="/contact"

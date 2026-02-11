@@ -61,7 +61,7 @@ export default function Navbar() {
                     className="flex md:hidden items-center justify-center bg-transparent border-none cursor-pointer p-2"
                     onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
                 >
-                    <CiMenuFries />
+                    <CiMenuFries className="text-black size-6"/>
 
                 </button>
             </div>

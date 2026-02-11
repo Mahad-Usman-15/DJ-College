@@ -1,36 +1,182 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# DJ Sindh Government Science College Website
 
-## Getting Started
+## Overview
 
-First, run the development server:
+This is the official website for D.J. Sindh Government Science College (DJ Science College), a public college affiliated with the University of Karachi. Located near Burns Road, Karachi, Sindh, Pakistan, the college is renowned for its excellence in science education and has produced many distinguished alumni.
 
+## About the College
+
+D.J. Sindh Government Science College (ڈی جے سندھ گورنمنٹ سائنس کالج) is a prestigious public institution dedicated to providing quality education in science and other disciplines. The college offers undergraduate programs with a focus on academic excellence, research, and innovation.
+
+### Mission
+The college cultivates intellectual growth and fosters excellence in education, research, and innovation, with a commitment to developing students' critical thinking, research capabilities, and personal growth.
+
+### Leadership
+- **Principal**: Professor Mohsin Shaikh
+
+## Features
+
+- Modern, responsive Next.js application
+- Interactive UI with smooth scrolling and animations
+- Comprehensive information about academic programs
+- Detailed facilities overview
+- Distinguished alumni showcase
+- Easy navigation and mobile-friendly design
+- Contact form and location integration
+
+## Academic Programs
+
+The college offers undergraduate programs with subject combinations from the following disciplines:
+
+- Mathematics
+- Physics
+- Chemistry
+- Geology
+- Statistics
+- Microbiology
+- Biochemistry
+- Botany
+- Zoology
+
+Additionally, the college offers a three-year Bachelor of Computer Science (B.C.S.) semester system programme affiliated with the University of Karachi.
+
+### Admission Information
+
+The college offers admission in Pre-Engineering and Pre-Medical for Intermediate level affiliated to the Board of Intermediate Education, Karachi (B.I.E.K) under CAP (Centralized Admission Policy).
+
+#### Departments Available:
+- Biochemistry
+- Botany
+- Chemistry
+- English
+- Geology
+- Islamic Studies
+- Computer Science
+- Mathematics
+- Microbiology
+- Pakistan Studies
+- Physical Education and Sports
+- Physics
+- Sindhi
+- Statistics
+- Urdu
+- Zoology
+
+## Facilities
+
+The college provides excellent facilities to support student learning and development:
+
+### Academic Buildings
+- **Main Building - New Portion**: Houses administration offices and departments including Urdu, Statistics, Islamic Studies and Pakistan Studies
+- **Main Building - Historic Portion**: Features departments of Biochemistry, Botany, English, Physics, Chemistry, Computer Science, Microbiology and Zoology
+- **A.Q. Block**: Dedicated classrooms specially designed for first-year students
+- **Science & Mathematics Wing**: Home to the Main Library, Mathematics and Geology departments
+- **M.Sc. Block**: Under construction with advanced facilities for higher education
+
+### Specialized Facilities
+- **AQ Khan Library**: Extensive collection of academic texts, research journals, and digital resources
+- **Biology Lab**: Advanced microscopes, incubators, autoclaves, and specimen preservation facilities
+- **Physics Lab**: Comprehensive equipment for mechanics, optics, electricity, magnetism, and modern physics experiments
+- **Chemistry Lab**: Well-ventilated facility with fume hoods, distillation apparatus, and chemical analysis equipment
+- **Computer Lab**: Modern workstations with latest software and high-speed internet connectivity
+- **Gymnasium**: State-of-the-art fitness equipment and wellness programs
+
+### Additional Amenities
+- **Auditorium**: State-of-the-art venue for seminars, lectures, and cultural events
+- **Canteen**: Affordable and nutritious meals in a social environment
+- **Book Shop**: Academic textbooks, reference materials, and stationery supplies
+
+## Distinguished Alumni
+
+The college has produced many notable alumni who have achieved success in various fields:
+
+- **Abdul Qadeer Khan** - Nuclear Scientist & Head of Pakistan Nuclear Weapons Program
+- **Ziaur Rahman** - Former President of Bangladesh
+- **Ashraf Habibullah** - President and CEO of Computers and Structures, Inc.
+- **Pirzada Qasim** - Ex Vice-Chancellor, University of Karachi & Ziauddin University
+- **Adeebul Hasan Rizvi** - Founder of Sindh Institute of Urology & Transplantation (SIUT)
+- **Shahid Masood** - Journalist and TV Anchor Person
+- **Kamran Ashraf** - National Hockey Player
+- **Shahid Ali Khan** - National Hockey Player
+- **Sohail Rana** - Film and Television Music Composer
+- **Syed Murad Ali Shah** - Chief Minister of Sindh, Pakistan
+- And many other accomplished professionals in various fields
+
+## Technical Details
+
+### Built With
+- [Next.js](https://nextjs.org/) - React framework for production
+- [React](https://reactjs.org/) - JavaScript library for building user interfaces
+- [Tailwind CSS](https://tailwindcss.com/) - Utility-first CSS framework
+- [Framer Motion](https://www.framer.com/motion/) - Animation library
+- [Lucide React](https://lucide.dev/) - Icon library
+- [React Icons](https://react-icons.github.io/react-icons/) - Popular icons as React components
+
+### Installation
+
+1. Clone the repository:
 ```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+git clone <repository-url>
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+2. Navigate to the project directory:
+```bash
+cd dj-college
+```
 
-You can start editing the page by modifying `app/page.js`. The page auto-updates as you edit the file.
+3. Install dependencies:
+```bash
+npm install
+```
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+4. Run the development server:
+```bash
+npm run dev
+```
 
-## Learn More
+5. Open [http://localhost:3000](http://localhost:3000) in your browser to see the website.
 
-To learn more about Next.js, take a look at the following resources:
+### Scripts
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+- `npm run dev` - Starts the development server
+- `npm run build` - Creates an optimized production build
+- `npm run start` - Starts the production server
+- `npm run lint` - Runs ESLint for code quality checking
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+## Navigation
 
-## Deploy on Vercel
+The website features a clean, intuitive navigation system with the following main sections:
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+- **Home**: Welcome message, facilities overview, academic programs, and aims
+- **Admission**: Information about admission process and available departments
+- **Alumni**: Showcase of distinguished graduates and their achievements
+- **Facilities**: Detailed information about college infrastructure and amenities
+- **Contact**: Contact form, location map, and contact information
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+## Contact Information
+
+- **Address**: V237+CQ5, Dr Ziauddin Ahmed Rd, Saddar Seari Quarters, Karachi, Pakistan
+- **Phone**: +92 21 XXXX XXXX / +92 21 YYYY YYYY
+- **Email**: info@college.edu.pk / admissions@college.edu.pk
+- **Social Media**: Facebook, LinkedIn, and Instagram links available on the website
+
+## Social Media
+
+Connect with us on social media:
+- Facebook: [D.J. Sindh College](https://www.facebook.com/DJSindhCollege/)
+- LinkedIn: [D.J. Science College](https://pk.linkedin.com/school/d-j-science-college/)
+- Instagram: [dj_ijt](https://www.instagram.com/dj_ijt/)
+
+## Contributing
+
+This project is maintained by the college's IT department. For issues or suggestions regarding the website, please contact the administration.
+
+## License
+
+This project is proprietary to D.J. Sindh Government Science College and is not licensed for public distribution.
+
+## Acknowledgments
+
+- The college administration for providing content and requirements
+- The development team for creating this modern, responsive website
+- All faculty and staff who contributed to the information displayed on the site

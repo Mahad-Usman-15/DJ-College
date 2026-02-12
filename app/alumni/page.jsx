@@ -2,6 +2,7 @@
 
 import { useEffect, useRef, useState } from 'react';
 import Image from 'next/image';
+import { EducationalOrganizationSchema, FAQPageSchema } from '../components/schema';
 import alumni1 from "../../images/abdulqadeer.webp"
 import alumni2 from "../../images/ziarehman.jpg"
 import alumni3 from "../../images/ashrAF.jpg"
@@ -188,6 +189,69 @@ export default function AlumniPage() {
 
     return (
         <div>
+            {/* Schema markup for the alumni page */}
+            <EducationalOrganizationSchema 
+              name="D.J. Sindh Government Science College"
+              description="A prestigious public college affiliated with the University of Karachi, known for producing distinguished alumni in various fields."
+              url="http://dj-college.vercel.app"
+              address={{
+                '@type': 'PostalAddress',
+                streetAddress: 'V237+CQ5, Dr Ziauddin Ahmed Rd',
+                addressLocality: 'Karachi',
+                addressRegion: 'Sindh',
+                postalCode: '',
+                addressCountry: 'PK'
+              }}
+              areaServed="Karachi"
+              alumni={[
+                {
+                  '@type': 'Person',
+                  name: 'Abdul Qadeer Khan',
+                  knowsAbout: 'Nuclear Science'
+                },
+                {
+                  '@type': 'Person',
+                  name: 'Ziaur Rahman',
+                  knowsAbout: 'Politics'
+                },
+                {
+                  '@type': 'Person',
+                  name: 'Ashraf Habibullah',
+                  knowsAbout: 'Technology'
+                },
+                {
+                  '@type': 'Person',
+                  name: 'Pirzada Qasim',
+                  knowsAbout: 'Education'
+                },
+                {
+                  '@type': 'Person',
+                  name: 'Adeebul Hasan Rizvi',
+                  knowsAbout: 'Medicine'
+                }
+              ]}
+            />
+            <FAQPageSchema 
+              mainEntity={[
+                {
+                  '@type': 'Question',
+                  name: 'Who are some notable alumni of the college?',
+                  acceptedAnswer: {
+                    '@type': 'Answer',
+                    text: 'Notable alumni include Abdul Qadeer Khan, Ziaur Rahman, Ashraf Habibullah, Pirzada Qasim, and Adeebul Hasan Rizvi.'
+                  }
+                },
+                {
+                  '@type': 'Question',
+                  name: 'What fields have alumni excelled in?',
+                  acceptedAnswer: {
+                    '@type': 'Answer',
+                    text: 'Our alumni have excelled in fields such as science, politics, technology, education, and medicine.'
+                  }
+                }
+              ]}
+            />
+            
             {/* Header */}
             <header className="bg-[linear-gradient(135deg,#ffffff_0%,#f0ede6_100%)] px-5 py-[60px] text-center border-b-[3px] border-[#2d7a4a] mb-[60px]">
                 <h1 className="text-[clamp(28px,5vw,48px)] text-[#1a1a1a] mb-4 font-bold tracking-[-0.5px]">

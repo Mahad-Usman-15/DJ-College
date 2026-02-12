@@ -1,6 +1,7 @@
 'use client';
 
 import { useState } from 'react';
+import { LocalBusinessSchema, FAQPageSchema } from '../components/schema';
 
 export default function ContactPage() {
   const [formData, setFormData] = useState({
@@ -30,6 +31,53 @@ export default function ContactPage() {
 
   return (
     <>
+      {/* Schema markup for the contact page */}
+      <LocalBusinessSchema 
+        name="D.J. Sindh Government Science College"
+        image="/images/contact-information.jpg"
+        telephone="+92 21 XXXX XXXX"
+        email="info@college.edu.pk"
+        address={{
+          '@type': 'PostalAddress',
+          streetAddress: 'V237+CQ5, Dr Ziauddin Ahmed Rd',
+          addressLocality: 'Karachi',
+          addressRegion: 'Sindh',
+          postalCode: '',
+          addressCountry: 'PK'
+        }}
+        geo={{
+          '@type': 'GeoCoordinates',
+          latitude: 24.8607,
+          longitude: 67.0011
+        }}
+        url="http://dj-college.vercel.app"
+        openingHours="Mo-Fr 08:00-16:00"
+        areaServed={{
+          '@type': 'City',
+          name: 'Karachi'
+        }}
+      />
+      <FAQPageSchema 
+        mainEntity={[
+          {
+            '@type': 'Question',
+            name: 'What is the college address?',
+            acceptedAnswer: {
+              '@type': 'Answer',
+              text: 'The college is located at V237+CQ5, Dr Ziauddin Ahmed Rd, Saddar Seari Quarters, Karachi, Pakistan.'
+            }
+          },
+          {
+            '@type': 'Question',
+            name: 'How can I contact the college?',
+            acceptedAnswer: {
+              '@type': 'Answer',
+              text: 'You can contact us by phone at +92 21 XXXX XXXX or by email at info@college.edu.pk.'
+            }
+          }
+        ]}
+      />
+      
       {/* Header */}
       <header className="bg-[#2d5016] text-white px-5 py-10 text-center">
         <h1 className="text-[2.5rem] font-bold mb-2">Contact Us</h1>

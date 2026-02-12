@@ -1,6 +1,7 @@
 'use client';
 
 import { useEffect, useState } from 'react';
+import { LocalBusinessSchema, FAQPageSchema } from '../components/schema';
 
 const FacilitiesPage = () => {
   const [visibleItems, setVisibleItems] = useState({});
@@ -80,6 +81,53 @@ const FacilitiesPage = () => {
 
   return (
     <div className="bg-[#f8f7f4] min-h-screen px-5 py-10 sm:px-5">
+      {/* Schema markup for the facilities page */}
+      <LocalBusinessSchema 
+        name="D.J. Sindh Government Science College Facilities"
+        image="/images/campus-facilities.jpg"
+        telephone="+92 21 XXXX XXXX"
+        email="info@college.edu.pk"
+        address={{
+          '@type': 'PostalAddress',
+          streetAddress: 'V237+CQ5, Dr Ziauddin Ahmed Rd',
+          addressLocality: 'Karachi',
+          addressRegion: 'Sindh',
+          postalCode: '',
+          addressCountry: 'PK'
+        }}
+        geo={{
+          '@type': 'GeoCoordinates',
+          latitude: 24.8607,
+          longitude: 67.0011
+        }}
+        url="http://dj-college.vercel.app"
+        openingHours="Mo-Fr 08:00-16:00"
+        areaServed={{
+          '@type': 'City',
+          name: 'Karachi'
+        }}
+      />
+      <FAQPageSchema 
+        mainEntity={[
+          {
+            '@type': 'Question',
+            name: 'What facilities are available at the college?',
+            acceptedAnswer: {
+              '@type': 'Answer',
+              text: 'The college offers state-of-the-art facilities including science labs, libraries, computer labs, gymnasium, auditorium, and more.'
+            }
+          },
+          {
+            '@type': 'Question',
+            name: 'Are the laboratories well-equipped?',
+            acceptedAnswer: {
+              '@type': 'Answer',
+              text: 'Yes, our laboratories are equipped with advanced equipment for Physics, Chemistry, and Biology experiments.'
+            }
+          }
+        ]}
+      />
+      
       <div className="max-w-[1200px] mx-auto">
         {/* Header */}
         <div className="text-center mb-[60px] py-10 max-[480px]:mb-10 max-[480px]:py-5">

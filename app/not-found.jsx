@@ -4,7 +4,7 @@ export default function NotFound() {
     <>
       <main className="grid min-h-full place-items-center bg-white px-6 py-24 sm:py-32 lg:px-8">
         <div className="text-center">
-          <p className="text-base font-semibold text-emabg-emerald-500">404</p>
+          <p className="text-base font-semibold text-emerald-500">404</p>
           <h1 className="mt-4 text-5xl font-semibold tracking-tight text-balance text-gray-900 sm:text-7xl">
             Page not found
           </h1>
@@ -14,7 +14,7 @@ export default function NotFound() {
           <div className="mt-10 flex items-center justify-center gap-x-6">
             <Link
               href="/"
-              className="rounded-md bg-emerald-500 px-3.5 py-2.5 text-sm font-semibold text-white shadow-xs hover:bg-emerald-500 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-emabg-emerald-500"
+              className="rounded-md bg-emerald-500 px-3.5 py-2.5 text-sm font-semibold text-white shadow-xs hover:bg-emerald-500 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-emerald-500"
             >
               Go back home
             </Link>

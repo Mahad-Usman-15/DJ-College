@@ -9,6 +9,7 @@ import ptm1 from '../../images/ptm1.jpg';
 import ptm2 from '../../images/ptm2.jpg';
 import Image from 'next/image';
 import { motion } from 'framer-motion';
+import { FAQPageSchema } from '../components/schema';
 
 export default function EventsPage() {
   const events = [
@@ -64,6 +65,28 @@ export default function EventsPage() {
 
   return (
     <div className="bg-white">
+      {/* Schema markup for the events page */}
+      <FAQPageSchema 
+        mainEntity={[
+          {
+            '@type': 'Question',
+            name: 'What events does the college organize?',
+            acceptedAnswer: {
+              '@type': 'Answer',
+              text: 'The college organizes diverse events including Parent-Teacher Meetings, National Games, Fire Drills, and other academic and cultural activities.'
+            }
+          },
+          {
+            '@type': 'Question',
+            name: 'How do events benefit students?',
+            acceptedAnswer: {
+              '@type': 'Answer',
+              text: 'Events enhance student growth, foster creativity, build leadership skills, and strengthen the sense of community on campus.'
+            }
+          }
+        ]}
+      />
+      
       {/* Top Description Section */}
       <motion.section
         initial="hidden"

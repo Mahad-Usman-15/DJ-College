@@ -1,0 +1,18 @@
+User-agent: *
+Allow: /
+
+# Allow important pages
+Allow: /$
+Allow: /admission/
+Allow: /alumni/
+Allow: /facilities/
+Allow: /contact/
+Allow: /events/
+
+# Disallow admin and private sections
+Disallow: /admin/
+Disallow: /wp-admin/
+Disallow: /private/
+
+# Sitemap location
+Sitemap: http://dj-college.vercel.app/sitemap.xml

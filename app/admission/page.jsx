@@ -1,6 +1,7 @@
 'use client';
 
 import { useEffect, useRef, useState } from 'react';
+import { CourseSchema, FAQPageSchema } from '../components/schema';
 
 export default function AdmissionPage() {
   const [visibleSections, setVisibleSections] = useState({});
@@ -115,6 +116,46 @@ export default function AdmissionPage() {
 
   return (
     <div className="max-w-[1200px] mx-auto p-10 font-['Segoe_UI','Helvetica_Neue',sans-serif] text-[#1a1a1a] bg-[#fafaf9] max-md:p-5">
+      {/* Schema markup for the admission page */}
+      <CourseSchema
+        name="Pre-Engineering Program"
+        description="Three-year Bachelor of Science program in pre-engineering fields affiliated with the University of Karachi."
+        provider={{
+          '@type': 'EducationalOrganization',
+          name: 'D.J. Sindh Government Science College',
+          sameAs: 'http://dj-college.vercel.app'
+        }}
+      />
+      <CourseSchema
+        name="Pre-Medical Program"
+        description="Three-year Bachelor of Science program in pre-medical fields affiliated with the University of Karachi."
+        provider={{
+          '@type': 'EducationalOrganization',
+          name: 'D.J. Sindh Government Science College',
+          sameAs: 'http://dj-college.vercel.app'
+        }}
+      />
+      <FAQPageSchema 
+        mainEntity={[
+          {
+            '@type': 'Question',
+            name: 'What are the admission requirements?',
+            acceptedAnswer: {
+              '@type': 'Answer',
+              text: 'Students must have completed intermediate level education from a recognized board.'
+            }
+          },
+          {
+            '@type': 'Question',
+            name: 'How do I apply for admission?',
+            acceptedAnswer: {
+              '@type': 'Answer',
+              text: 'Applications are submitted through the Centralized Admission Policy (CAP) system.'
+            }
+          }
+        ]}
+      />
+      
       <h1 className="text-[36px] font-bold mb-5 text-[#10b981] max-md:text-[28px]">
         Admission
       </h1>

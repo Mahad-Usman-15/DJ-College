@@ -22,7 +22,8 @@ The college cultivates intellectual growth and fosters excellence in education, 
 - Detailed facilities overview
 - Distinguished alumni showcase
 - Easy navigation and mobile-friendly design
-- Contact form and location integration
+- Functional contact form with email integration
+- Location map and contact information
 
 ## Academic Programs
 
@@ -159,6 +160,17 @@ The website features a clean, intuitive navigation system with the following mai
 - **Phone**: +92 21 XXXX XXXX / +92 21 YYYY YYYY
 - **Email**: info@college.edu.pk / admissions@college.edu.pk
 - **Social Media**: Facebook, LinkedIn, and Instagram links available on the website
+
+## Contact Form Setup
+
+The website includes a functional contact form that sends emails directly to the college administration. To set up the email functionality:
+
+1. Install the Resend package: `npm install resend`
+2. Get an API key from [Resend](https://resend.com)
+3. Add your API key to environment variables in `.env.local`
+4. Update the email addresses in `app/api/send-email/route.js` as needed
+
+For detailed setup instructions, refer to `docs/email-setup.md`.
 
 ## Social Media
 

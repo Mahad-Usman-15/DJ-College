@@ -12,6 +12,8 @@ export default function ContactPage() {
   });
 
   const [submitted, setSubmitted] = useState(false);
+  const [loading, setLoading] = useState(false);
+  const [error, setError] = useState('');
 
   const handleChange = (e) => {
     const { name, value } = e.target;
@@ -19,14 +21,40 @@ export default function ContactPage() {
       ...prev,
       [name]: value,
     }));
+    
+    // Clear error when user starts typing
+    if (error) setError('');
   };
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
-    console.log('Form submitted:', formData);
-    setSubmitted(true);
-    setFormData({ name: '', email: '', phone: '', message: '' });
-    setTimeout(() => setSubmitted(false), 5000);
+    setLoading(true);
+    setError('');
+
+    try {
+      const response = await fetch('/api/contact', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(formData),
+      });
+
+      const result = await response.json();
+
+      if (response.ok) {
+        setSubmitted(true);
+        setFormData({ name: '', email: '', phone: '', message: '' });
+        setTimeout(() => setSubmitted(false), 5000);
+      } else {
+        setError(result.error || 'Failed to send message. Please try again.');
+      }
+    } catch (err) {
+      setError('Network error. Please check your connection and try again.');
+      console.error('Error submitting form:', err);
+    } finally {
+      setLoading(false);
+    }
   };
 
   return (
@@ -96,6 +124,12 @@ export default function ContactPage() {
               Send us a Message
             </h2>
 
+            {error && (
+              <div className="bg-red-100 text-red-700 p-[15px] rounded-[5px] mb-[20px] border border-red-300">
+                {error}
+              </div>
+            )}
+            
             {submitted && (
               <div className="bg-[#d4edda] text-[#155724] p-[15px] rounded-[5px] mb-[20px] border border-[#c3e6cb]">
                 Thank you! Your message has been sent successfully.
@@ -185,9 +219,12 @@ export default function ContactPage() {
               {/* Submit */}
               <button
                 type="submit"
-                className="mt-[10px] px-[30px] py-[15px] bg-[#2d5016] text-white rounded-[5px] text-[1.1rem] font-semibold transition-colors duration-300 hover:bg-[#1f3610]"
+                disabled={loading}
+                className={`mt-[10px] px-[30px] py-[15px] bg-[#2d5016] text-white rounded-[5px] text-[1.1rem] font-semibold transition-colors duration-300 hover:bg-[#1f3610] ${
+                  loading ? 'opacity-70 cursor-not-allowed' : ''
+                }`}
               >
-                Send Message
+                {loading ? 'Sending...' : 'Send Message'}
               </button>
             </form>
           </div>

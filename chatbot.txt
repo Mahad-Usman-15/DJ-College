@@ -1,0 +1,61 @@
+TechStack
+Frontend: Next.js Chat UI
+Backend: FastAPI
+Embeddings: BGE-small
+Vector DB: Chroma
+LLM: Ollama (Llama 3 / Mistral)
+RAG: Manual pipeline
+
+Architecture
+User
+  ↓
+Next.js (Chat UI)
+  ↓
+FastAPI (RAG API Layer)
+  ↓
+Retriever (ChromaDB)
+  ↓
+Embedding Model (BGE)
+  ↓
+LLM (Ollama - Llama3/Mistral)
+  ↓
+Response → Stream back to UI
+
+
+Frontend Layer (Next.js)
+Responsibilities:
+Chat UI
+Streaming responses
+Error handling
+Loading states
+Rate limit protection (basic)
+
+
+Backend Layer (FastAPI)
+Responsibilities:
+RAG orchestration
+Embedding generation
+Vector search
+LLM prompt construction
+Response streaming
+Logging
+Rate limiting
+
+backend/
+  main.py
+  routers/
+    chat.py
+  services/
+    embedding.py
+    retriever.py
+    llm.py
+    rag_pipeline.py
+  db/
+    chroma_client.py
+  models
+    schemas.py
+
+
+
+
+

@@ -4,6 +4,7 @@ import { useEffect, useRef, useState } from 'react';
 import Image from 'next/image';
 import principal from "../images/Mohsin Shaikh3.jpg";
 import Link from 'next/link';
+import { facilitiesData, academicProgramsData, aimsData } from './data/home';
 
 export function CollegePageClient() {
   const [visibleSections, setVisibleSections] = useState({});
@@ -115,32 +116,7 @@ export function CollegePageClient() {
           </h2>
 
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-            {[
-              {
-                title: 'Main Building - New Portion',
-                text: 'Houses administration offices and departments including Urdu, Statistics, Islamic Studies and Pakistan Studies.',
-              },
-              {
-                title: 'Main Building - Historic Portion',
-                text: 'Features departments of Biochemistry, Botany, English, Physics, Chemistry, Computer Science, Microbiology and Zoology.',
-              },
-              {
-                title: 'A.Q. Block',
-                text: 'Dedicated classrooms specially designed for first-year students.',
-              },
-              {
-                title: 'Science & Mathematics Wing',
-                text: 'Home to the Main Library, Mathematics and Geology departments.',
-              },
-              {
-                title: 'M.Sc. Block',
-                text: 'Under construction with advanced facilities for higher education.',
-              },
-              {
-                title: 'Gymnasium & Sports Complex',
-                text: 'Offers cricket, football, and other recreational activities.',
-              },
-            ].map((item) => (
+            {facilitiesData.map((item) => (
               <div
                 key={item.title}
                 className="bg-white p-6 rounded-xl shadow-md border-l-4 border-emerald-600 hover:-translate-y-1 transition"
@@ -172,17 +148,7 @@ export function CollegePageClient() {
           </p>
 
           <div className="flex flex-wrap gap-3">
-            {[
-              'Mathematics',
-              'Physics',
-              'Chemistry',
-              'Geology',
-              'Statistics',
-              'Microbiology',
-              'Biochemistry',
-              'Botany',
-              'Zoology',
-            ].map((sub) => (
+            {academicProgramsData.map((sub) => (
               <span
                 key={sub}
                 className="bg-emerald-600 text-white px-4 py-2 rounded-full text-sm"
@@ -213,24 +179,7 @@ export function CollegePageClient() {
           </p>
 
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
-            {[
-              {
-                title: 'Academic Excellence',
-                text: 'Deliver world-class education with strong curriculum standards.',
-              },
-              {
-                title: 'Research & Innovation',
-                text: 'Promote meaningful research and scientific advancement.',
-              },
-              {
-                title: 'Student Development',
-                text: 'Build leadership, character, and critical thinking.',
-              },
-              {
-                title: 'Social Impact',
-                text: 'Address real-world challenges and create positive change.',
-              },
-            ].map((aim) => (
+            {aimsData.map((aim) => (
               <div
                 key={aim.title}
                 className="bg-white p-6 rounded-xl shadow-md border-t-4 border-emerald-600"

@@ -1,43 +1,44 @@
-# Implementation Plan: SEO Optimization for DJ College Website
+# Implementation Plan: [FEATURE]
 
-**Branch**: `1-seo-optimization` | **Date**: 2026-02-12 | **Spec**: [link to spec.md]
-**Input**: Feature specification from `/specs/1-seo-optimization/spec.md`
+**Branch**: `[###-feature-name]` | **Date**: [DATE] | **Spec**: [link]
+**Input**: Feature specification from `/specs/[###-feature-name]/spec.md`
 
 **Note**: This template is filled in by the `/sp.plan` command. See `.specify/templates/commands/plan.md` for the execution workflow.
 
 ## Summary
 
-Implement comprehensive SEO optimization for the DJ College Next.js website, focusing on technical SEO improvements, on-page optimization, local SEO for educational institutions, Core Web Vitals enhancement, and structured data implementation. The approach involves optimizing metadata, implementing schema markup, improving Core Web Vitals scores, generating sitemaps, and maintaining accessibility compliance while preserving the existing user experience.
+[Extract from feature spec: primary requirement + technical approach from research]
 
 ## Technical Context
 
-**Language/Version**: JavaScript/TypeScript (Next.js 15.5.12)
-**Primary Dependencies**: Next.js, React, Tailwind CSS, Framer Motion, Lucide React, React Icons
-**Storage**: N/A (client-side only optimization)
-**Testing**: Lighthouse, Google Search Console, Web Vitals monitoring
-**Target Platform**: Web (responsive for mobile/desktop)
-**Project Type**: Web application
-**Performance Goals**: Core Web Vitals "Good" ratings (LCP ≤ 2.5s, FID ≤ 100ms, CLS ≤ 0.1), 90+ Lighthouse performance score
-**Constraints**: Must preserve existing dynamic animations and user experience, maintain WCAG AA accessibility compliance, support multilingual content (Urdu)
-**Scale/Scope**: Single website with 6 primary pages (home, admission, alumni, facilities, contact, events)
+<!--
+  ACTION REQUIRED: Replace the content in this section with the technical details
+  for the project. The structure here is presented in advisory capacity to guide
+  the iteration process.
+-->
+
+**Language/Version**: [e.g., Python 3.11, Swift 5.9, Rust 1.75 or NEEDS CLARIFICATION]  
+**Primary Dependencies**: [e.g., FastAPI, UIKit, LLVM or NEEDS CLARIFICATION]  
+**Storage**: [if applicable, e.g., PostgreSQL, CoreData, files or N/A]  
+**Testing**: [e.g., pytest, XCTest, cargo test or NEEDS CLARIFICATION]  
+**Target Platform**: [e.g., Linux server, iOS 15+, WASM or NEEDS CLARIFICATION]
+**Project Type**: [single/web/mobile - determines source structure]  
+**Performance Goals**: [domain-specific, e.g., 1000 req/s, 10k lines/sec, 60 fps or NEEDS CLARIFICATION]  
+**Constraints**: [domain-specific, e.g., <200ms p95, <100MB memory, offline-capable or NEEDS CLARIFICATION]  
+**Scale/Scope**: [domain-specific, e.g., 10k users, 1M LOC, 50 screens or NEEDS CLARIFICATION]
 
 ## Constitution Check
 
 *GATE: Must pass before Phase 0 research. Re-check after Phase 1 design.*
 
-- Code Quality: Clean, modular, and scalable architecture - PASSED (will implement in modular components/files)
-- Performance First: Optimized loading speed and SEO compliance - PASSED (focus of this feature)
-- Accessibility: WCAG-compliant UI for inclusive user experience - PASSED (maintaining compliance)
-- Maintainability: Clear folder structure and reusable components - PASSED (following Next.js conventions)
-- Responsiveness: Mobile-first, fully responsive design - PASSED (existing design preserved)
-- SEO Optimization: Comprehensive metadata and structured data implementation - PASSED (core focus)
+[Gates determined based on constitution file]
 
 ## Project Structure
 
 ### Documentation (this feature)
 
 ```text
-specs/1-seo-optimization/
+specs/[###-feature]/
 ├── plan.md              # This file (/sp.plan command output)
 ├── research.md          # Phase 0 output (/sp.plan command)
 ├── data-model.md        # Phase 1 output (/sp.plan command)
@@ -47,29 +48,51 @@ specs/1-seo-optimization/
 ```
 
 ### Source Code (repository root)
+<!--
+  ACTION REQUIRED: Replace the placeholder tree below with the concrete layout
+  for this feature. Delete unused options and expand the chosen structure with
+  real paths (e.g., apps/admin, packages/something). The delivered plan must
+  not include Option labels.
+-->
 
 ```text
-app/
-├── layout.js            # Global metadata and structure
-├── page.js              # Home page
-├── admission/
-│   └── page.jsx         # Admission page
-├── alumni/
-│   └── page.jsx         # Alumni page
-├── contact/
-│   └── page.jsx         # Contact page
-├── events/
-│   └── page.jsx         # Events page
-├── facilities/
-│   └── page.jsx         # Facilities page
-├── components/
-│   ├── header.jsx       # Navigation component
-│   └── footer.jsx       # Footer component
-├── globals.css          # Global styles
-└── sitemap.js           # Sitemap generation
+# [REMOVE IF UNUSED] Option 1: Single project (DEFAULT)
+src/
+├── models/
+├── services/
+├── cli/
+└── lib/
+
+tests/
+├── contract/
+├── integration/
+└── unit/
+
+# [REMOVE IF UNUSED] Option 2: Web application (when "frontend" + "backend" detected)
+backend/
+├── src/
+│   ├── models/
+│   ├── services/
+│   └── api/
+└── tests/
+
+frontend/
+├── src/
+│   ├── components/
+│   ├── pages/
+│   └── services/
+└── tests/
+
+# [REMOVE IF UNUSED] Option 3: Mobile + API (when "iOS/Android" detected)
+api/
+└── [same as backend above]
+
+ios/ or android/
+└── [platform-specific structure: feature modules, UI flows, platform tests]
 ```
 
-**Structure Decision**: Using the existing Next.js app router structure with additional SEO-focused files (sitemap.js, metadata configurations) and updated page components with enhanced SEO properties.
+**Structure Decision**: [Document the selected structure and reference the real
+directories captured above]
 
 ## Complexity Tracking
 
@@ -77,4 +100,5 @@ app/
 
 | Violation | Why Needed | Simpler Alternative Rejected Because |
 |-----------|------------|-------------------------------------|
-| N/A | N/A | N/A |
+| [e.g., 4th project] | [current need] | [why 3 projects insufficient] |
+| [e.g., Repository pattern] | [specific problem] | [why direct DB access insufficient] |

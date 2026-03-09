@@ -3,6 +3,17 @@
 :root {
   --background: #ffffff;
   --foreground: #171717;
+  
+  /* Chatbot Widget - Emerald Palette */
+  --chatbot-primary: #059669;        /* emerald-600 */
+  --chatbot-primary-hover: #047857;  /* emerald-700 */
+  --chatbot-primary-light: #ecfdf5;  /* emerald-50 */
+  --chatbot-outline: #6ee7b7;        /* emerald-300 */
+  --chatbot-bg: #ffffff;
+  --chatbot-border: #e5e7eb;
+  --chatbot-text: #111827;
+  --chatbot-text-secondary: #6b7280;
+  --chatbot-bot-bg: #f9fafb;         /* gray-50 */
 }
 
 @theme inline {
@@ -23,6 +34,28 @@ body {
   background: var(--background);
   color: var(--foreground);
   font-family: Arial, Helvetica, sans-serif;
+}
+
+/* Chatbot Mobile Responsive Styles (FR-018) */
+@media (max-width: 767px) {
+  /* Full-screen mode for mobile devices */
+  [role="dialog"][aria-labelledby="chatbot-title"] {
+    position: fixed !important;
+    top: 50% !important;
+    left: 50% !important;
+    transform: translate(-50%, -50%) !important;
+    width: 95vw !important;
+    max-width: 95vw !important;
+    height: 70vh !important;
+    max-height: 70vh !important;
+    border-radius: 12px !important;
+    z-index: 9999 !important; /* Ensure widget doesn't block navigation */
+  }
+  
+  /* Adjust message area height for mobile */
+  [role="dialog"][aria-labelledby="chatbot-title"] [class*="max-h-"] {
+    max-height: calc(70vh - 150px) !important;
+  }
 }
 
 

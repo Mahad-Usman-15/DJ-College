@@ -1,4 +1,0 @@
-I want to make a RAG based chatbot and integrate into this porject.Suggest me which tech stack should i adopt which is free,easy to use and integrate.I have background in 
-NextJS/React,Python,Open AI Agents SDK
-https://nextjs.org/learn/certificate?course=seo&user=145607&certId=seo-145607-1770982113031
-

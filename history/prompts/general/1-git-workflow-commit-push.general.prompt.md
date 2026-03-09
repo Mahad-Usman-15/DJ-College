@@ -1,38 +1,37 @@
-description = "Convert existing tasks into actionable, dependency-ordered GitHub issues for the feature based on available design artifacts."
-
-prompt = """
 ---
-description: Convert existing tasks into actionable, dependency-ordered GitHub issues for the feature based on available design artifacts.
-tools: ['github/github-mcp-server/issue_write']
+id: 1
+title: Git Workflow Commit Push
+stage: general
+date_iso: 2026-02-13
+surface: agent
+model: Qwen
+feature: none
+branch: main
+user: Techno
+command: /sp.git.commit_pr
+labels:
+  - git
+  - commit
+  - push
+  - workflow
+files_yaml:
+  - README.md
+  - app/contact/page.jsx
+  - package-lock.json
+  - package.json
+  - prompt.txt
+  - app/api/contact/route.js
+tests_yaml: []
+links:
+  spec: null
+  ticket: null
+  adr: null
+  pr: null
+outcome: success
+evaluation: All changes successfully committed and pushed to main branch
 ---
 
-## User Input
-
-```text
-$ARGUMENTS
-```
-
-You **MUST** consider the user input before proceeding (if not empty).
-
-## Outline
-
-1. Run `.specify/scripts/powershell/check-prerequisites.ps1 -Json -RequireTasks -IncludeTasks` from repo root and parse FEATURE_DIR and AVAILABLE_DOCS list. All paths must be absolute. For single quotes in args like "I'm Groot", use escape syntax: e.g 'I'\\''m Groot' (or double-quote if possible: "I'm Groot").
-1. From the executed script, extract the path to **tasks**.
-1. Get the Git remote by running:
-
-```bash
-git config --get remote.origin.url
-```
-
-> [!CAUTION]
-> ONLY PROCEED TO NEXT STEPS IF THE REMOTE IS A GITHUB URL
-
-1. For each task in the list, use the GitHub MCP server to create a new issue in the repository that is representative of the Git remote.
-
-> [!CAUTION]
-> UNDER NO CIRCUMSTANCES EVER CREATE ISSUES IN REPOSITORIES THAT DO NOT MATCH THE REMOTE URL
-
----
+## Prompt Text
 
 As the main request completes, you MUST create and complete a PHR (Prompt History Record) using agent‑native tools when possible.
 
@@ -57,4 +56,17 @@ As the main request completes, you MUST create and complete a PHR (Prompt Histor
 4) Validate + report
    - No unresolved placeholders; path under `history/prompts/` and matches stage; stage/title/date coherent; print ID + path + stage + title.
    - On failure: warn, don't block. Skip only for `/sp.phr`.
-"""
+
+/sp.git.commit_pr donot create a new branch push to the exisiting main branch.
+
+## Response Text
+
+I've successfully completed the Git workflow:
+
+✅ Changes have been committed to the main branch with the message: "feat(contact): update contact page with API integration and documentation"
+
+✅ The changes have been pushed to the remote repository (GitHub) on the main branch
+
+The commit included 6 files with 209 insertions and 61 deletions, including a new API route file at `app/api/contact/route.js`.
+
+Your changes are now live on the main branch of your DJ-College repository on GitHub.

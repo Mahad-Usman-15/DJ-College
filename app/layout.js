@@ -3,6 +3,7 @@ import "./globals.css";
 import Footer from "./components/footer";
 import Navbar from "./components/header";
 import WebVitalsReporter from "./components/WebVitalsReporter";
+import { ChatbotWidget } from "./components/chatbot";
 const geistSans = Geist({
   variable: "--font-geist-sans",
   subsets: ["latin"],
@@ -92,6 +93,7 @@ export default function RootLayout({ children }) {
         <Navbar/>
         {children}
         <Footer/>
+        <ChatbotWidget />
       </body>
     </html>
   );

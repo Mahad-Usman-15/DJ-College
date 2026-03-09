@@ -4,6 +4,7 @@ import Footer from "./components/footer";
 import Navbar from "./components/header";
 import WebVitalsReporter from "./components/WebVitalsReporter";
 import { ChatbotWidget } from "./components/chatbot";
+import { Analytics } from "@vercel/analytics/next";
 const geistSans = Geist({
   variable: "--font-geist-sans",
   subsets: ["latin"],
@@ -94,6 +95,7 @@ export default function RootLayout({ children }) {
         {children}
         <Footer/>
         <ChatbotWidget />
+        <Analytics />
       </body>
     </html>
   );

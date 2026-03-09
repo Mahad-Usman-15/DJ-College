@@ -1,0 +1,10 @@
+{
+  "version": 1,
+  "skills": {
+    "rag-architect": {
+      "source": "jeffallan/claude-skills",
+      "sourceType": "github",
+      "computedHash": "a6ece6375c7565f18184089aa0dcb818748aa6bd3dd2825262acbbbb98552541"
+    }
+  }
+}

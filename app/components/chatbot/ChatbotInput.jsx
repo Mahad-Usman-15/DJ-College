@@ -44,7 +44,7 @@ export default function ChatbotInput({ value, onChange, onSend, isDisabled = fal
           placeholder="Type your message..."
           disabled={isDisabled}
           rows={1}
-          className="flex-1 resize-none rounded-lg border border-gray-300 px-3 py-2 text-sm focus:border-emerald-500 focus:outline-none focus:ring-1 focus:ring-emerald-500 disabled:bg-gray-100"
+          className="flex-1 resize-none rounded-lg border border-gray-300 px-3 text-black py-2 text-sm focus:border-emerald-500 focus:outline-none focus:ring-1 focus:ring-emerald-500 disabled:bg-gray-100"
           aria-label="Type your message"
           style={{ minHeight: '40px', maxHeight: '120px' }}
         />
